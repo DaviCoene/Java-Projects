@@ -1,0 +1,45 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+import entitie.Values;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+		System.out.print("Enter account number: ");
+		int number = sc.nextInt();
+		System.out.print("Enter account holder: ");
+		String name = sc.next();
+
+		Values cont1 = new Values(number, name, 0);
+		System.out.print("Is there na inital deposti (y/n): ");
+		char initial = sc.next().charAt(0);
+		if (initial == 'y') {
+			System.out.print("Enter initial deposit value: ");
+			double balance = sc.nextDouble();
+			cont1.setBalance(balance);
+		}
+		System.out.println();
+		System.out.printf("Account data: %n");
+		System.out.printf("Accont %d, Holder: %s, Balance: $ %.2f", cont1.getNumberAccount(), cont1.getNameAccount(), cont1.getBalance());
+		System.out.println();
+		
+		System.out.print("Enter deposit value: ");
+		double more = sc.nextDouble();
+		cont1.moreBalance(more);
+		System.out.printf("Updated account data: %n");
+		System.out.printf("Accont %d, Holder: %s, Balance: $ %.2f", cont1.getNumberAccount(), cont1.getNameAccount(), cont1.getBalance());
+		
+		System.out.print("Enter a withdraw value: ");
+		double less = sc.nextDouble();
+		cont1.lessBalance(less);
+		System.out.printf("Updated account data: %n");
+		System.out.printf("Accont %d, Holder: %s, Balance: $ %.2f", cont1.getNumberAccount(), cont1.getNameAccount(), cont1.getBalance());
+		
+		sc.close();
+	}
+
+}

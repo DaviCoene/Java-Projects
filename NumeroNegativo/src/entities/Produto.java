@@ -1,0 +1,21 @@
+package entities;
+
+public class Produto {
+
+		private int numero;
+
+		public Produto(int numero) {
+			this.numero = numero;
+		} 
+		
+		public int getNumero() {
+			return numero;
+		}
+
+		public void setNumero(int numero) {
+			this.numero = numero;
+		}
+
+		
+		
+}
