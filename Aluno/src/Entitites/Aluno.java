@@ -1,4 +1,4 @@
-package Entitites;
+package Entities;
 
 public class Aluno {
 
@@ -68,7 +68,7 @@ public class Aluno {
 	public float calcularFrequencia(int numAulas) {
 		float frequencia;
 		try {frequencia =  numAulas / faltas;
-		return frequencia = 0;
+		return frequencia;
 		}
 		catch(ArithmeticException w) {
 			return frequencia = 0;
@@ -76,16 +76,16 @@ public class Aluno {
 
 	}
 	
-	public String verificarSituação(int numAulas) {
-		float a = calcularMedia();
+	public String verificarSituaÃ§Ã£o(int numAulas) {
+		float a = calcularMedia();						
 		float f = calcularFrequencia(numAulas);
 		String e = "APROVADO";
-		String g = "RECUPERAÇÂO";
+		String g = "RECUPERAÃ‡Ã‚O";
 		String x = "REPROVADO";
-		if (a >= 7 && f >= 75){
+		if (a >= 7 && f >= 2.5){
 			return e;
 		}
-		if ((a < 7 && a > 7) && f >= 75){
+		if ((a < 4 && a > 7) && f >= 2.5){
 			return g;
 		}
 		else
