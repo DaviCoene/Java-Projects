@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Program {
@@ -20,11 +19,7 @@ public class Program {
 			sc.next();
 			
 		}
-		catch (InputMismatchException e) {
-			System.out.println("Input Error");
-			
-		}
-		
+
 		System.out.println("END OF PROGRAM");
 		
 		
