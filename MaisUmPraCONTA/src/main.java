@@ -17,7 +17,7 @@ public class main {
         int number = sc.nextInt();
         
         System.out.print("Holder: ");
-        sc.nextLine();  // Consume newline
+        sc.nextLine();
         String holder = sc.nextLine();
         
         System.out.print("Initial balance: ");
