@@ -7,7 +7,7 @@ public class program {
 
 	public static void main(String[] args) {
 		
-		File file = new File("c:\\temp\\text.text.txt");
+		File file = new File("c:\\temp\\out.txt");
 		Scanner sc =null;
 		try {
 			sc = new Scanner(file);
